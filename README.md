@@ -30,7 +30,7 @@ Jetty is a light weight container which run your code. meaning this is the serve
 
 to push the code, do this
 
-1. git add <<file name>>
+1. git add file name
 
 2. git commit -m "brief abt the change"
 
