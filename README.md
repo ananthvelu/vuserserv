@@ -32,8 +32,8 @@ to push the code, do this
 
 1. git add <<file name>>
 
-2. git commit -m "breif abt the change"
+2. git commit -m "brief abt the change"
 
 3. git pull --rebase
 
-4. git push origin master
+4. git push origin develop
