@@ -10,6 +10,7 @@ Get the source code :
 3. run code using this command from project home directory:
 
 a. mvn package (you need to install maven and set the M2_HOME directory in your PATH environment). 
+
 b. 
 
 Command to run the service :
@@ -17,11 +18,15 @@ Command to run the service :
 java -jar target/dependency/jetty-runner.jar target/*.war
 
 you need to set environmental variable PORT = some port 
+
 CSH shell :
-    setenv PORT 5000
+   	
+	setenv PORT 5000
 or 
+
 bash :
-    export PORT=5000
+
+	export PORT=5000
 
 go to browser, execute localhost:5000
 
