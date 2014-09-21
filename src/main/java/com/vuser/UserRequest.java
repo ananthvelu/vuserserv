@@ -1,7 +1,16 @@
 package com.vuser;
 
 /**
- * Created by Ashok on 9/20/2014.
+ * This class contains the information about real world user object.
  */
 public class UserRequest {
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
