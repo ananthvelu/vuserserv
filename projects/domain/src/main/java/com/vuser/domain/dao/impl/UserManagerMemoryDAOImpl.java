@@ -1,7 +1,7 @@
-package com.rest.DAO.impl;
+package com.vuser.domain.dao.impl;
 
-import com.rest.DAO.UserManagerDAO;
-import com.vuser.User;
+import com.vuser.domain.dao.UserManagerDAO;
+import com.vuser.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +9,10 @@ import java.util.List;
 /**
  * Created by Ashok on 9/20/2014.
  */
-public class UserManagerMemoryDAO implements UserManagerDAO{
+public class UserManagerMemoryDAOImpl implements UserManagerDAO{
     private int nextUserId = 0;
 
-    List users = new ArrayList();
+    List<User> users = new ArrayList();
 
     public User fetchUserById(Integer id)
     {

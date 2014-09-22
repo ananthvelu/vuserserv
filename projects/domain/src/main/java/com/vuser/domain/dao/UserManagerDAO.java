@@ -1,11 +1,12 @@
-package com.rest.DAO;
+package com.vuser.domain.dao;
 
-import com.vuser.User;
+import com.vuser.model.User;
 
 import java.util.List;
 
+
 /**
- * Created by Ashok on 9/20/2014.
+ * DAO for user manager
  */
 public interface UserManagerDAO {
     public User fetchUserById(Integer id);

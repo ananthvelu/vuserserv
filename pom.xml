@@ -1,13 +1,57 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.example</groupId>
-  <artifactId>heloworld</artifactId>
-  <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>heloworld Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.vuser</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+    <artifactId>vuser-parent</artifactId>
+    <packaging>pom</packaging>
+    <name>vuser builder all</name>
+    <description>
+        Builds everything
+    </description>
+
+    <properties>
+    <project.version>1.0.0-SNAPSHOT</project.version>
+        <jdk.version>1.7</jdk.version>
+        <checkstyle.fail.on.error>true</checkstyle.fail.on.error>
+
+    </properties>
+
+    <modules>
+        <module>projects/common</module>
+        <module>projects/domain</module>
+        <module>projects/rest/interface</module>
+        <module>projects/rest/service</module>
+        <module>projects/app/vuser-war</module>
+    </modules>
+
+    <!-- default dependency versions -->
+    <dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.vuser</groupId>
+            <artifactId>vuser-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vuser</groupId>
+            <artifactId>rest-vuser-interface</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    <dependency>
+        <groupId>com.vuser</groupId>
+        <artifactId>rest-vuser-service</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+        <dependency>
+            <groupId>com.vuser</groupId>
+            <artifactId>vuser-domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    <dependency>
+        <groupId>com.vuser</groupId>
+        <artifactId>vuser-war</artifactId>
+        <version>${project.version}</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -29,7 +73,13 @@
           <artifactId>jetty-runner</artifactId>
           <version>7.5.4.v20111024</version>
       </dependency>
-  </dependencies>
+      <dependency>
+      	<groupId>javax.ws.rs</groupId>
+		<artifactId>javax.ws.rs-api</artifactId>
+			<version>2.0</version>
+			</dependency>
+    </dependencies>
+    </dependencyManagement>
   <build>
   <finalName>heloworld</finalName>
   <plugins>
