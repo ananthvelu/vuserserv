@@ -1,2 +1,27 @@
 target
 .idea
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.idea
+*.iml
+
+.settings
+.project
+.classpath
+*.iml
+*.log
+.checkstyle
+*~
+\#*\#
+
+target/
+
+
+
+test-output/
+temp/
+bin/
