@@ -15,7 +15,7 @@ b.
 
 Command to run the service :
 
-java -jar target/dependency/jetty-runner.jar target/*.war
+java -jar target/dependency/jetty-runner.jar projects/app/vuser-war/target/vuserserv.war
 
 you need to set environmental variable PORT = some port 
 
