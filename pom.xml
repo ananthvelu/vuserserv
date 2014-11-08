@@ -8,79 +8,73 @@
     <description>
         Builds everything
     </description>
+        <properties>
+            <jdk.version>1.7</jdk.version>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <org.apache.cxf.version>2.7.2</org.apache.cxf.version>
+            <org.springframework.version>4.1.1.RELEASE</org.springframework.version>
+            <org.eclipse.jetty.version>8.1.8.v20121106</org.eclipse.jetty.version>
+        </properties>
 
-    <properties>
-    <project.version>1.0.0-SNAPSHOT</project.version>
-        <jdk.version>1.7</jdk.version>
-        <checkstyle.fail.on.error>true</checkstyle.fail.on.error>
+        <modules>
+            <module>projects/common</module>
+            <module>projects/domain</module>
+            <module>projects/rest/interface</module>
+            <module>projects/rest/service</module>
+            <module>projects/app/vuser-app</module>
+        </modules>
 
-    </properties>
+        <!-- default dependency versions -->
+        <dependencyManagement>
+            <dependencies>
+	       <dependency>
+                    <groupId>com.vuser</groupId>
+                    <artifactId>vuser-common</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>com.vuser</groupId>
+                    <artifactId>rest-vuser-interface</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>com.vuser</groupId>
+                    <artifactId>rest-vuser-service</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>com.vuser</groupId>
+                    <artifactId>vuser-domain</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
+		<dependency>
+                    <groupId>com.vuser</groupId>
+                    <artifactId>vuser-app</artifactId>
+                    <version>${project.version}</version>
+                </dependency>
 
-    <modules>
-        <module>projects/common</module>
-        <module>projects/domain</module>
-        <module>projects/rest/interface</module>
-        <module>projects/rest/service</module>
-        <module>projects/app/vuser-war</module>
-    </modules>
 
-    <!-- default dependency versions -->
-    <dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>com.vuser</groupId>
-            <artifactId>vuser-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.vuser</groupId>
-            <artifactId>rest-vuser-interface</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    <dependency>
-        <groupId>com.vuser</groupId>
-        <artifactId>rest-vuser-service</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-        <dependency>
-            <groupId>com.vuser</groupId>
-            <artifactId>vuser-domain</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    <dependency>
-        <groupId>com.vuser</groupId>
-        <artifactId>vuser-war</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-servlet</artifactId>
-            <version>7.6.0.v20120127</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-        </dependency>
-      <dependency>
-          <groupId>org.mortbay.jetty</groupId>
-          <artifactId>jetty-runner</artifactId>
-          <version>7.5.4.v20111024</version>
-      </dependency>
-      <dependency>
-      	<groupId>javax.ws.rs</groupId>
-		<artifactId>javax.ws.rs-api</artifactId>
-			<version>2.0</version>
-			</dependency>
-    </dependencies>
-    </dependencyManagement>
-  <build>
+                <dependency>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                    <version>3.8.1</version>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-servlet</artifactId>
+                    <version>7.6.0.v20120127</version>
+	        </dependency>
+		<dependency>
+		    <groupId>javax.ws.rs</groupId>
+		    <artifactId>javax.ws.rs-api</artifactId>
+		    <version>2.0</version>
+		</dependency>
+            </dependencies>
+        </dependencyManagement>
+    </project>
+
+  <!--build>
   <finalName>heloworld</finalName>
   <plugins>
   <plugin>
@@ -105,5 +99,4 @@
   </executions>
   </plugin>
   </plugins>
-  </build>
-</project>
+  </build-->
